@@ -12,3 +12,22 @@ To compile the protobuf file, `api/api.proto` execute the following command:
 ```
 protoc -I api/ -I ${GOPATH}/src --go_out=plugins=grpc:api api/api.proto
 ```
+
+To compile the server into a binary:
+```
+go build -i -v -o bin/server server/main.go
+```
+To compile the client into a binary:
+```
+go build -i -v -o bin/client client/main.go
+```
+
+## Run
+First run the server:
+```
+bin/server
+```
+Then run the client (which talks to the server):
+```
+bin/client
+```

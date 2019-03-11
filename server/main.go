@@ -4,7 +4,8 @@ import (
 	"log"
 	"net"
 
-	"github.com/mec07/grpc/api"
+	"github.com/mec07/demo-grpc/api"
+	"google.golang.org/grpc"
 )
 
 // main start a gRPC server and waits for connection

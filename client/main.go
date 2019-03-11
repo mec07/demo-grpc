@@ -10,15 +10,13 @@ import (
 )
 
 func main() {
-	var conn *grpc.ClientConn
-
 	// create client TLS creds
 	creds, err := credentials.NewClientTLSFromFile("cert/server.crt", "")
 	if err != nil {
 		log.Fatalf("could not load TLS certs: %s", err)
 	}
 
-	conn, err = grpc.Dial("localhost:7777", grpc.WithTransportCredentials(creds))
+	conn, err := grpc.Dial("localhost:7777", grpc.WithTransportCredentials(creds))
 	if err != nil {
 		log.Fatalf("did not connect: %s", err)
 	}

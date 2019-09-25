@@ -6,7 +6,12 @@ To run this you will need the `protobuf` package installed. If you're on a mac y
 ```
 brew install protobuf
 ```
-This gives you access to the `protoc` command (although you may have to add `$GOPATH/bin` to your `PATH` environment variable).
+This gives you access to the `protoc` command.
+You will also require  the `protoc-gen-go` executable:
+```
+go get -u github.com/golang/protobuf/protoc-gen-go
+```
+Make sure that you have added `$GOPATH/bin` to your `PATH` environment variable.
 
 To compile the protobuf file, `api/api.proto` execute the following command:
 ```
